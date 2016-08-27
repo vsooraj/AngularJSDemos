@@ -1,0 +1,10 @@
+﻿<div class="container">
+    Name:
+    <br />
+    <input type="text" data-ng-model="txtName" />{{ name }}
+    <ul>
+        <li data-ng-repeat="cust in customers | orderBy:'city' | filter: txtName ">{{ cust.name  | uppercase}} {{ cust.city  | lowercase}}</li>
+    </ul>
+    <br />
+    <a href="#/Home">Home</a>
+</div>
